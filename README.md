@@ -1,6 +1,7 @@
 # probot-app
 
-[Probot](https://probot.github.io/) app to enable using greenkeeper-keeper as a GitHub App
+[Probot](https://probot.github.io/) app to enable using greenkeeper-keeper as a
+[GitHub App](https://developer.github.com/apps/about-apps/)
 
 <!-- status badges -->
 [![Build Status][ci-badge]][ci-link]
