@@ -1,0 +1,42 @@
+{
+  "name": "probot-app",
+  "description": "Probot app to enable using greenkeeper-keeper as a GitHub App",
+  "license": "MIT",
+  "private": true,
+  "repository": "greenkeeper-keeper/probot-app",
+  "bugs": "https://github.com/greenkeeper-keeper/probot-app/issues",
+  "homepage": "https://github.com/greenkeeper-keeper/probot-app#readme",
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
+  "scripts": {
+    "start": "./lib/index.js",
+    "lint:js": "eslint . --cache",
+    "lint:travis": "travis-lint .travis.yml",
+    "lint:sensitive": "ban",
+    "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
+    "test:unit:base": "mocha --recursive test/unit",
+    "test:unit": "nyc run-s test:unit:base",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@travi/any": "1.8.2",
+    "@travi/eslint-config-travi": "1.6.18",
+    "babel-preset-travi": "1.4.0",
+    "babel-register": "6.26.0",
+    "ban-sensitive-files": "1.9.2",
+    "chai": "4.2.0",
+    "codecov": "3.1.0",
+    "commitlint-config-travi": "1.2.30",
+    "cz-conventional-changelog": "2.1.0",
+    "husky": "1.1.1",
+    "mocha": "5.2.0",
+    "npm-run-all": "4.1.3",
+    "nyc": "13.0.1",
+    "sinon": "6.3.5",
+    "travis-lint": "1.0.0"
+  }
+}
