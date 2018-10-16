@@ -33,7 +33,7 @@ $ npm test
 [license-link]: LICENSE
 [license-badge]: https://img.shields.io/github/license/greenkeeper-keeper/probot-app.svg
 [ci-link]: https://travis-ci.com/greenkeeper-keeper/probot-app
-[ci-badge]: https://img.shields.io/travis/greenkeeper-keeper/probot-app.svg?branch=master
+[ci-badge]: https://img.shields.io/travis/com/greenkeeper-keeper/probot-app.svg?branch=master
 [coverage-link]: https://codecov.io/github/greenkeeper-keeper/probot-app
 [coverage-badge]: https://img.shields.io/codecov/c/github/greenkeeper-keeper/probot-app.svg
 [commit-convention-link]: https://conventionalcommits.org
