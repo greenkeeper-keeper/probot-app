@@ -3,12 +3,14 @@
   "description": "Probot app to enable using greenkeeper-keeper as a GitHub App",
   "license": "MIT",
   "private": true,
+  "main": "./lib/index.js",
   "repository": "greenkeeper-keeper/probot-app",
   "bugs": "https://github.com/greenkeeper-keeper/probot-app/issues",
   "homepage": "https://github.com/greenkeeper-keeper/probot-app#readme",
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
-    "start": "./lib/index.js",
+    "start": "probot run ./lib/index.js",
+    "clean": "rimraf ./lib",
     "lint:js": "eslint . --cache",
     "lint:md": "remark --quiet --frail .",
     "lint:travis": "travis-lint .travis.yml",
@@ -16,6 +18,8 @@
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:*",
     "test:unit:base": "mocha --recursive test/unit",
     "test:unit": "nyc run-s test:unit:base",
+    "prebuild": "run-s clean",
+    "build": "webpack --env production",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "config": {
@@ -24,10 +28,13 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/plugin-external-helpers": "7.0.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/register": "7.0.0",
     "@travi/any": "1.8.2",
     "@travi/eslint-config-travi": "1.6.18",
-    "babel-preset-travi": "1.4.0",
-    "babel-register": "6.26.0",
+    "babel-loader": "8.0.4",
     "ban-sensitive-files": "1.9.2",
     "chai": "4.2.0",
     "codecov": "3.1.0",
@@ -39,7 +46,14 @@
     "nyc": "13.0.1",
     "remark-cli": "5.0.0",
     "remark-preset-lint-travi": "1.1.0",
+    "rimraf": "2.6.2",
     "sinon": "6.3.5",
-    "travis-lint": "1.0.0"
+    "travis-lint": "1.0.0",
+    "uglifyjs-webpack-plugin": "2.0.1",
+    "webpack": "4.20.2",
+    "webpack-cli": "3.1.2"
+  },
+  "dependencies": {
+    "probot": "7.3.1"
   }
 }
