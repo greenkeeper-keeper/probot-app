@@ -6,7 +6,7 @@ After(function () {
   this.app = null;
 });
 
-Given('the app is available', async function () {
+Given(/^the app is available$/, async function () {
   this.app = new Application();
   this.app.load(gkkApp);
 });
