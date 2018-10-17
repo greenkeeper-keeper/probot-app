@@ -1,4 +1,4 @@
-# probot-app
+# @greenkeeper-keeper/probot
 
 [Probot](https://probot.github.io/) app to enable using greenkeeper-keeper as a
 [GitHub App](https://developer.github.com/apps/about-apps/)

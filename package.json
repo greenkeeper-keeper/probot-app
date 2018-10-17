@@ -1,5 +1,5 @@
 {
-  "name": "probot-app",
+  "name": "@greenkeeper-keeper/probot",
   "description": "Probot app to enable using greenkeeper-keeper as a GitHub App",
   "license": "MIT",
   "version": "0.0.1",
