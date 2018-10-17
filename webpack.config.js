@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = function buildConfiguration(env) {
   return {
@@ -15,16 +15,7 @@ module.exports = function buildConfiguration(env) {
       concatenateModules: true,
       namedModules: false,
       minimize: true,
-      minimizer: [
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            screw_ie8: true,
-            warnings: false,
-            mangle: {keep_fnames: true}
-          },
-          sourceMap: true
-        })
-      ]
+      minimizer: [new TerserPlugin()]
     },
     module: {
       rules: [
