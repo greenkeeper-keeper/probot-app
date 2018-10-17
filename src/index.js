@@ -1,4 +1,4 @@
-export default function (app) {
+module.exports = app => {
   // Your code here
   app.log('Yay, the app was loaded!');
 
@@ -12,4 +12,4 @@ export default function (app) {
 
   // To get your app running against GitHub, see:
   // https://probot.github.io/docs/development/
-}
+};

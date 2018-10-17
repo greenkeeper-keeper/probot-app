@@ -3,7 +3,7 @@
   "description": "Probot app to enable using greenkeeper-keeper as a GitHub App",
   "license": "MIT",
   "version": "0.0.1",
-  "main": "./lib/index.js",
+  "main": "./src/index.js",
   "repository": "greenkeeper-keeper/probot-app",
   "bugs": "https://github.com/greenkeeper-keeper/probot-app/issues",
   "homepage": "https://github.com/greenkeeper-keeper/probot-app#readme",
