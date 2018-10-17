@@ -2,7 +2,7 @@
   "name": "probot-app",
   "description": "Probot app to enable using greenkeeper-keeper as a GitHub App",
   "license": "MIT",
-  "private": true,
+  "version": "0.0.1",
   "main": "./lib/index.js",
   "repository": "greenkeeper-keeper/probot-app",
   "bugs": "https://github.com/greenkeeper-keeper/probot-app/issues",
@@ -20,6 +20,7 @@
     "test:unit": "nyc run-s test:unit:base",
     "prebuild": "run-s clean",
     "build": "webpack --env production",
+    "postinstall": "npm run build",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "config": {
