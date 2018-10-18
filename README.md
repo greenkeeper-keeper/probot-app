@@ -1,5 +1,7 @@
 # @greenkeeper-keeper/probot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/greenkeeper-keeper/probot-app.svg)](https://greenkeeper.io/)
+
 [Probot](https://probot.github.io/) app to enable using greenkeeper-keeper as a
 [GitHub App](https://developer.github.com/apps/about-apps/)
 
