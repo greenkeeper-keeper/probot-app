@@ -9,7 +9,7 @@
   "homepage": "https://github.com/greenkeeper-keeper/probot-app#readme",
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
-    "start": "probot run ./lib/index.js",
+    "start": "probot run ./src/index.js",
     "clean": "rimraf ./lib",
     "lint:js": "eslint . --cache",
     "lint:md": "remark --quiet --frail .",
