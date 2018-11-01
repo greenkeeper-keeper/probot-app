@@ -4,14 +4,13 @@ Feature: Non-matching webhooks
   Scenario: incorrect webhook event
     Given the app is available
     And the PR was submitted by the greenkeeper integration
-    When the foo.opened webhook is received
+    When the issues.opened webhook is received
     Then the webhook response indicates that the webhook will be skipped
 
   @wip
   Scenario: incorrect webhook action
     Given the app is available
     And the PR was submitted by the greenkeeper integration
-    And the webhook is for a pull_request event and a foo action
     When the pull_request.foo webhook is received
     Then the webhook response indicates that the webhook will be skipped
 
@@ -25,8 +24,7 @@ Feature: Non-matching webhooks
   @wip
   Scenario: Non-success status event
     Given the app is available
-    And the webhook is for a status event and a pending state
-    When the webhook is received
+    When the status.pending webhook is received
     Then the webhook response indicates that the webhook will be skipped
 
   @wip
